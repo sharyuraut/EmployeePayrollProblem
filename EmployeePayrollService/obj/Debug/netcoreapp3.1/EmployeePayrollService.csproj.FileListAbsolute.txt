@@ -1,0 +1,4 @@
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\EmployeePayrollService.exe
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.csprojAssemblyReference.cache
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.AssemblyInfoInputs.cache
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.AssemblyInfo.cs
