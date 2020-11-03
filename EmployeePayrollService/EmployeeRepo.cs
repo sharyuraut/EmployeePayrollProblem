@@ -19,6 +19,7 @@ namespace EmployeePayrollService
                 {
                     string query = @"SELECT * FROM employee_payroll;";
 
+                    //define SqlCommand Object
                     SqlCommand cmd = new SqlCommand(query, this.connection);
                     this.connection.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -40,7 +41,7 @@ namespace EmployeePayrollService
                             employeePayroll.Tax = (double)dr.GetDecimal(10);
                             employeePayroll.NetPay = (double)dr.GetDecimal(11);
 
-                            //Display retrieved record
+                            //Display retrieved record - UC 2
                             Console.WriteLine("{0},{1},{2},{3},{4},{5}", employeePayroll.EmployeeID, employeePayroll.EmployeeName, employeePayroll.PhoneNumber, employeePayroll.Address, employeePayroll.Department, employeePayroll.Gender, employeePayroll.PhoneNumber);
                             Console.WriteLine("\n");
                         }
@@ -56,6 +57,10 @@ namespace EmployeePayrollService
             catch (Exception e)
             {
                 throw new Exception(e.Message);
+            }
+            finally
+            {
+                this.connection.Close();
             }
         }
     }
