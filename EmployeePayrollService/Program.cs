@@ -6,7 +6,10 @@ namespace EmployeePayrollService
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("SQL!");
+
+            EmployeeRepo repo = new EmployeeRepo();
+            repo.GetAllEmployee();
         }
     }
 }
