@@ -7,6 +7,9 @@ C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bi
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\EmployeePayrollService.runtimeconfig.dev.json
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\EmployeePayrollService.dll
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\EmployeePayrollService.pdb
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.dll
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.pdb
+C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.genruntimeconfig.cache
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
@@ -15,6 +18,3 @@ C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bi
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.csproj.CoreCompileInputs.cache
 C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.csproj.CopyComplete
-C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.dll
-C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.pdb
-C:\Users\HP LAPTOP\source\repos\EmployeePayrollService\EmployeePayrollService\obj\Debug\netcoreapp3.1\EmployeePayrollService.genruntimeconfig.cache
