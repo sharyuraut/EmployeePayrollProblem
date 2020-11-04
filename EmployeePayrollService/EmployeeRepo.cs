@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -61,6 +62,51 @@ namespace EmployeePayrollService
             finally
             {
                 this.connection.Close();
+            }
+        }
+
+        public bool AddEmployee(EmployeePayroll payroll)
+        {
+            try
+            {
+                using (this.connection)
+                {
+                    SqlCommand command = new SqlCommand("AddNewEmployee", this.connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+
+                    command.Parameters.AddWithValue("@Name", payroll.EmployeeName);
+                    command.Parameters.AddWithValue("@basic_pay", payroll.BasicPay);
+                    command.Parameters.AddWithValue("@start_Date", payroll.StartDate);
+                    command.Parameters.AddWithValue("@gender", payroll.Gender);
+                    command.Parameters.AddWithValue("@phone_no", payroll.PhoneNumber);
+                    command.Parameters.AddWithValue("@address", payroll.Address);
+                    command.Parameters.AddWithValue("@department", payroll.Department);
+                    command.Parameters.AddWithValue("@deductions", payroll.Deductions);
+                    command.Parameters.AddWithValue("@taxable_pay", payroll.TaxablePay);
+                    command.Parameters.AddWithValue("@income_tax", payroll.Tax);
+                    command.Parameters.AddWithValue("@net_pay", payroll.NetPay);
+
+
+                    connection.Open();
+                    var result = command.ExecuteNonQuery();
+                    connection.Close();
+
+                    if (result != 0)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }
