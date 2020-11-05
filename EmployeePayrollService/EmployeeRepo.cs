@@ -6,10 +6,12 @@ using System.Text;
 
 namespace EmployeePayrollService
 {
-    class EmployeeRepo
+    public class EmployeeRepo
     {
         public static string connectionString = @"Data Source='(LocalDB)\ABC';Initial Catalog=EmployeeDetails;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(connectionString);
+        //private string connectionString;
+        private readonly SqlConnection connection = new SqlConnection(connectionString);
+        //SqlConnection connection = new SqlConnection(connectionString);
 
         public void GetAllEmployee()
         {
@@ -109,5 +111,62 @@ namespace EmployeePayrollService
                 connection.Close();
             }
         }
+
+        public int UpdateEmployee(EmployeeSalaryModel model)
+        {
+            int salary = 0;
+            try
+            {
+                using (connection)
+                {
+                    SqlConnection connection = new SqlConnection(connectionString);
+                    EmployeeSalaryModel displayModel = new EmployeeSalaryModel();
+
+                    SqlCommand command = new SqlCommand("UpdateEmployeePayroll", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@payroll_id", model.payroll_id);
+                    command.Parameters.AddWithValue("@basic_pay", model.payroll_id);
+                    command.Parameters.AddWithValue("@start_Date", model.start_Date);
+                    command.Parameters.AddWithValue("@id", model.EmployeeId);
+                    command.Parameters.AddWithValue("@department", model.department);
+                    command.Parameters.AddWithValue("@name", model.name);
+
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            displayModel.EmployeeId = reader.GetInt32(0);
+                            displayModel.payroll_id = reader.GetInt32(1);
+                            displayModel.basic_pay = reader.GetInt32(2);
+                            displayModel.start_Date = reader.GetString(3);
+                            displayModel.name = reader.GetString(4);
+                            displayModel.department = reader.GetString(5);
+                            salary = displayModel.payroll_id;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Data found!");
+                    }
+                    reader.Close();
+                    return salary;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                connection.Close();
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
     }
 }
